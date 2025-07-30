@@ -1,6 +1,6 @@
 # ChatGPT Sakura~ Interface Theme
 
-![ChatGPT Sakura Preview](./Screenshot-2025-07-11-004515.jpg)
+![ChatGPT Sakura Preview](assets/GPT GUI.png)
 
 
 ## 🌸 About This Project
