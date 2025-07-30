@@ -1,0 +1,169 @@
+/* ==UserStyle==
+@name           ChatGPT Sakura~
+@namespace      ---------
+@version        1.0.3
+@description    Fixed input bar visible, dreamy cherry blossom
+@match          *://openai.com/*
+==/UserStyle== */
+
+@-moz-document domain("chatgpt.com") {
+
+  html, body {
+    background: url("https://wallpapercave.com/uwp/uwp4709187.jpeg") center/cover no-repeat fixed !important;
+    color: #ffe6f0 !important;
+    font-family: 'Segoe UI', 'Noto Sans JP', 'Arial', sans-serif !important;
+  }
+
+  .content-fade {
+    mask-image: linear-gradient(to bottom, var(--fade-start-color, transparent), var(--fade-end-color, black));
+    -webkit-mask-image: linear-gradient(to bottom, var(--fade-start-color, transparent), var(--fade-end-color, black));
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .content-fade::after {
+      --fade-start-color: color-mix(in lch longer hue, var(--bg-primary), transparent 100%);
+      --fade-end-color: color-mix(in lch longer hue, var(--bg-primary), transparent 0%);
+    }
+  }
+
+  .content-fade::after {
+    --fade-start-color: transparent;
+    --fade-end-color: black;
+  }
+
+  /* Remove/soften borders & shadows (no textarea/input) */
+  .sticky.bottom-0.left-0.w-full,
+  .border-t,
+  .absolute.bottom-0.left-0,
+  .rounded-md,
+  .shadow,
+  button,
+  div[class*="border"],
+  div[class*="shadow"] {
+    border: none !important;
+    box-shadow: none !important;
+    background: #8c048696 !important;
+    backdrop-filter: blur(4px) !important;
+  }
+
+  /* ✨ Keep parent containers transparent */
+  body > div,
+  .dark.bg-gray-900,
+  .dark.bg-token-main-surface-primary,
+  .h-full.bg-token-main-surface-primary,
+  .flex.h-full.w-full.flex-col,
+  .flex-1,
+  .overflow-y-auto,
+  .relative.flex.h-full.w-full.flex-1.flex-col {
+    background: transparent !important;
+  }
+
+	
+	/* Copy & Edit buttons: make them rounded and pinkish */
+	button, 
+	div[class*="copy"], 
+	div[class*="edit"], 
+	div[role="button"] {
+	  border-radius: 8px !important;                     /* little curve */
+	  background: rgba(255, 182, 230, 0.1) !important;   /* soft pink glass background */
+	  backdrop-filter: blur(2px) !important;             /* subtle glass blur */
+	  border: 1px solid rgba(255, 182, 230, 0.3) !important; /* soft border */
+	  color: #ffd0eb !important;                         /* soft sakura pink text/icon */
+	}
+
+	/*  Pink glow on hover for these buttons */
+	button:hover, 
+	div[class*="copy"]:hover, 
+	div[class*="edit"]:hover, 
+	div[role="button"]:hover {
+	  background: rgba(255, 182, 230, 0.2) !important;
+	  box-shadow: 0 0 6px rgba(255, 182, 230, 0.4) !important;
+	  color: #ffb6e6 !important;
+	}
+
+  /* REMOVE overflow-hidden from the big block: do NOT style .overflow-hidden globally */
+
+  /* Input/chat area container: transparent + border */
+  .sticky.bottom-0.left-0.w-full,
+  .border-t,
+  .absolute.bottom-0.left-0 {
+    background: rgba(255, 240, 250, 0.15) !important;
+    backdrop-filter: blur(6px) !important;
+    border-top: 1px solid rgba(255, 182, 230, 0.3) !important;
+  }
+
+  /*  Textarea itself: white border + outline */
+  textarea.text-token-text-primary {
+	  border: 1px solid rgb(255, 255, 255) !important;
+	  outline: 1px solid rgb(255, 255, 255) !important;
+	  border-radius: 10px !important;
+	  background: rgba(0, 0, 0, .1) !important;  /* darker semi-transparent bg for better contrast */
+	  backdrop-filter: blur(6px) !important;
+	  color: #f35dbf !important;  /* bright text */
+	  font-weight: 500 !important;  /* slightly bolder for clarity */
+	}
+
+	
+	/*  Sidebar soft pink glass background */
+	.bg-token-bg-elevated-secondary {
+	  background: rgba(255, 182, 230, 0.15) !important; /* soft pink transparent */
+	  backdrop-filter: blur(6px) !important;
+	  border-radius: 12px !important;
+	  border: 1px solid rgba(255, 182, 230, 0.3) !important; /* subtle border */
+	}
+
+	/*  Make user message bubble soft pink glass */
+	.bg-token-message-surface {
+	  background: rgba(255, 182, 230, 0.2) !important; /* soft pink with transparency */
+	  backdrop-filter: blur(4px) !important;
+	  color: #fff !important; /* white text inside */
+	  border-radius: 12px !important;
+	  border: 1px solid rgba(255, 182, 230, 0.3) !important; /* subtle border */
+	}
+
+	/*  Small header/subheading soft pink style */
+	.text-token-text-secondary {
+	  color: #ffd0eb !important; /* soft sakura pink text */
+	}
+
+	/* Change its background too if needed */
+	div.flex.items-center.text-token-text-secondary {
+	  background: rgba(255, 182, 230, 0.15) !important; /* soft pink glass */
+	  backdrop-filter: blur(4px) !important;
+	  border-radius: 8px !important;
+	  border: 1px solid rgba(255, 182, 230, 0.3) !important;
+	}
+
+
+  /* Pink glow hover for buttons/links */
+  button:hover, a:hover {
+    color: #ffb6e6 !important;
+    box-shadow: 0 0 8px rgb(255, 182, 230) !important;
+  }
+
+  /* Rounded cards & soft blur, but NOT overflow-hidden globally */
+  .rounded-md, .shadow, .scrollbar-container {
+    border-radius: 14px !important;
+    background: #8c048696 !important;
+    backdrop-filter: blur(0px) !important;
+    box-shadow: 0 0 10px rgb(255, 182, 230) !important;
+  }
+
+  footer, .dark.bg-gray-800, .bg-gray-900 {
+    background: transparent !important;
+    border: none !important;
+  }
+
+  ::selection {
+    background: #ffc4e2 !important;
+    color: #0000 !important;
+  }
+
+  /*  force input/chat bar always visible */
+  .sticky.bottom-0,
+  .sticky.bottom-0.left-0.w-full {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
