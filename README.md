@@ -1,6 +1,6 @@
 # ChatGPT Sakura~ Interface Theme
 
-![ChatGPT Sakura Preview](assets/GPT%20GUI.png)
+![ChatGPT Sakura Preview](assets/GPT_GUI.png)
 
 
 ## 🌸 About This Project
@@ -16,6 +16,7 @@ It transforms the ChatGPT interface into a dreamy cherry blossom (Sakura) style 
 - Rounded corners and subtle shadows for a modern look  
 - Compatible with the latest ChatGPT UI (July 2025 update)
 
+## 
 ## 📦 Included Files
 
 - `sakura-gpt.user.css`: The CSS style file to be used with Stylus  
