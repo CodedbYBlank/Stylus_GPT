@@ -3,12 +3,12 @@
 ![ChatGPT Sakura Preview](assets/GPT_GUI.png)
 
 
-## 🌸 About This Project
+## About This Project
 
 **ChatGPT Sakura~** is a custom CSS theme designed for the Stylus Chrome extension.  
 It transforms the ChatGPT interface into a dreamy cherry blossom (Sakura) style with soft pastel colors and glassy pink elements, providing a pleasant and aesthetic chat experience.
 
-## ✨ Features
+## Features
 
 - Beautiful cherry blossom wallpaper background  
 - Translucent glass effect on sidebar, chat bubbles, buttons, and input areas  
@@ -16,13 +16,12 @@ It transforms the ChatGPT interface into a dreamy cherry blossom (Sakura) style 
 - Rounded corners and subtle shadows for a modern look  
 - Compatible with the latest ChatGPT UI (July 2025 update)
 
-## 
-## 📦 Included Files
+## Included Files
 
 - `sakura-gpt.user.css`: The CSS style file to be used with Stylus  
 - `Screenshot-2025-07-11-004515.jpg`: Preview image of the themed interface
 
-## 🚀 How to Use
+## How to Use
 
 1. Install the [Stylus Chrome extension](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)  
 2. Open Stylus and create a new style  
@@ -30,7 +29,7 @@ It transforms the ChatGPT interface into a dreamy cherry blossom (Sakura) style 
 4. Apply the style to `chat.openai.com`  
 5. Refresh ChatGPT and enjoy the Sakura-themed interface!
 
-## 🙏 Credits
+## Credits
 
 - Theme created by **Navneet**  
 - Background image from [wallpapercave.com](https://wallpapercave.com/uwp/uwp4709187.jpeg)

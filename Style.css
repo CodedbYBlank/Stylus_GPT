@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           ChatGPT Sakura~
-@namespace      ---------
+@namespace      ----~
 @version        1.0.3
-@description    Fixed input bar visible, dreamy cherry blossom
+@description    Fixed input bar visible, dreamy cherry blossom~
 @match          *://openai.com/*
 ==/UserStyle== */
 
@@ -13,6 +13,12 @@
     color: #ffe6f0 !important;
     font-family: 'Segoe UI', 'Noto Sans JP', 'Arial', sans-serif !important;
   }
+
+	#thread-bottom-container {
+  	background-color: rgba(255, 192, 203, 0) !important; 
+	backdrop-filter: blur(0px) !important; /* pink with transparency */
+}
+
 
   .content-fade {
     mask-image: linear-gradient(to bottom, var(--fade-start-color, transparent), var(--fade-end-color, black));
@@ -114,7 +120,7 @@
 
 	/*  Make user message bubble soft pink glass */
 	.bg-token-message-surface {
-	  background: rgba(255, 182, 230, 0.2) !important; /* soft pink with transparency */
+	  background: rgba(255, 182, 230, .33) !important; /* soft pink with transparency */
 	  backdrop-filter: blur(4px) !important;
 	  color: #fff !important; /* white text inside */
 	  border-radius: 12px !important;
@@ -141,6 +147,11 @@
     box-shadow: 0 0 8px rgb(255, 182, 230) !important;
   }
 
+	.user-message-bubble-color {
+    background-color: #ffb6e66e;
+    color: var(--theme-user-msg-text);
+	}
+	
   /* Rounded cards & soft blur, but NOT overflow-hidden globally */
   .rounded-md, .shadow, .scrollbar-container {
     border-radius: 14px !important;
